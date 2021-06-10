@@ -8,13 +8,16 @@
 
 body {
   font-family: "Viaoda Libre", cursive;
-  color: #fff;
   line-height: 1.4;
   font-size: 1.3rem;
+  background-color: #f4f4f4;
 }
+
+/* showcase */
 
 #showcase {
   height: 100vh;
+  padding: 0 2rem;
   background-image: url("../images/beach img2.jpg");
   background-position: center;
   background-size: cover;
@@ -24,11 +27,12 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: #fff;
 }
 
 .big-heading {
   line-height: 1.2;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   margin-bottom: 2rem;
 }
 
@@ -45,9 +49,131 @@ body {
   padding: 0.5rem 0.7rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
+  transition: 500ms ease;
 }
-
 
 .header-link:hover {
   background-color: #e36414;
+}
+
+/* content */
+
+#content {
+  color: #e36414;
+  font-size: 1.2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+
+.grid > div {
+  border: #888 1px solid;
+  padding: 1rem 1rem;
+  text-align: left;
+}
+
+.grid > div:hover {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+.grid-bg-1 {
+  background-image: url("../images/beach img3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.grid-bg-2 {
+  background-image: url("../images/beach img1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.grid-item-1 {
+  grid-column: 1 / span 2;
+}
+
+.grid-item-4 {
+  grid-row: 3 / span 2;
+}
+
+.grid-item-7 {
+  grid-column: 1 / span 2;
+}
+
+.grid-item-8 {
+  grid-column: 1 / span 2;
+}
+
+/* Footer */
+
+#footer {
+  padding: 1rem;
+  color: #e36414;
+  text-align: center;
+}
+
+.icon {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Media query */
+
+@media (min-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-item-1 {
+    grid-column: 1 / span 3;
+  }
+
+  .grid-item-7 {
+    grid-column: 1 / span 3;
+  }
+
+  .grid-item-8 {
+    grid-column: auto;
+  }
+  .grid-item-4 {
+    grid-row: 2 / span 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .grid-item-1 {
+    grid-column: span 2;
+  }
+
+  .grid-item-4 {
+    grid-row: span 2;
+  }
+
+  .grid-item-5 {
+    grid-row: span 2;
+  }
+
+  .grid-item-7 {
+    grid-column: span 2;
+  }
+
+  .grid-item-9 {
+    grid-column: span 3;
+  }
+
+  .grid-item-10 {
+    grid-column: span 5;
+    padding: 5rem 2rem;
+  }
 }
